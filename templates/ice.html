@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <title>음식 정보</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <script type="text/javascript">
+
+        $(document).ready(function () {
+
+          showReview();
+        });
+
+        function showReview() {
+            $("#cards-box").empty();
+
+             $.ajax({
+                    type: "GET",
+                    url: "/food?title_give=" + $('#title').val(),
+                    data: {},
+                    success: function (response) {
+                        let articles = response["reviews"];
+                        for (let i = 0; i < articles.length; i++) {
+                            let article = articles[i];
+                            makeCard(article["title"], article["img"], article["ingredient"], article["recipe"])
+                        }
+                    }
+                });
+        }
+
+        function makeCard(title, img, ingredient, recipe) {
+            let tempHtml = `<div class="card">
+                        <img class="card-img-top" src="${img}" alt="Card image cap">
+                         <div class="card-body">
+                                    <a  class="card-title">${title}</a>
+                                    <p class="card-text">${ingredient}</p>
+                                    <p class="card-text comment">${recipe}</p>
+                         </div>
+
+                         </div>`;
+
+            $("#cards-box").append(tempHtml);
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="cards-box" class="card-columns">
+<div class="card">
+                    <img class="card-img-top"
+                         src=" "
+                         alt="Card image cap">
+                    <div class="card-body">
+                        <a  class="card-title"></a>
+                        <p class="card-text"></p>
+                        <p class="card-text comment"></p>
+                    </div>
+                </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

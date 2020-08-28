@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <title>쉬운 요리 세상</title>
+    <style> h1 {
+        color: orange
+    }
+
+    h1 {
+        font-size: 90px
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h1 {
+        font-family: Cursive
+    }
+
+    h1 {
+        text-decoration: overline underline;
+    }
+
+    h1 {
+        position: relative;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+        margin: 30px;
+        border: 30px solid #dddddd;
+        padding: 30px;
+    }
+
+    @keyframes move {
+        from {
+            left: 500px;
+        }
+        to {
+            left: 0px;
+        }
+    }
+
+
+    div.card {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        font-style: italic
+    }
+
+    li {
+        padding-top: 10px;
+
+        display: inline;
+
+        font: bold 50px fantasy;
+        padding: 0 10px;
+    }
+
+    .menu {
+        margin: auto;
+        width: 800px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 30px
+    }
+
+    .point {
+        font-size: 20px;
+        float: left;
+    }
+
+    #search {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    #search {
+        display: block;
+        margin: 0 auto;
+        width: 800px;
+        height: 50px;
+        font-size: 40px;
+        position: relative;
+
+
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes move {
+        from {
+            left: 500px;
+        }
+        to {
+            left: 0px;
+        }
+    }
+#cards-box {
+    }
+    </style>
+
+<!--    <script type="text/javascript">-->
+
+<!--        $(document).ready(function () {-->
+
+<!--          showReview();-->
+<!--        });-->
+
+<!--        function showReview() {-->
+<!--            $("#cards-box").empty();-->
+
+<!--             $.ajax({-->
+<!--                    type: "GET",-->
+<!--                    url: "/food?title_give=" + $('#title').val(),-->
+<!--                    data: {},-->
+<!--                    success: function (response) {-->
+<!--                        let articles = response["reviews"];-->
+<!--                        for (let i = 0; i < articles.length; i++) {-->
+<!--                            let article = articles[i];-->
+<!--                            makeCard(article["title"], article["img"], article["ingredient"], article["recipe"])-->
+<!--                        }-->
+<!--                    }-->
+<!--                });-->
+        }
+
+<!--        function makeCard(title, img, ingredient, recipe) {-->
+<!--            let tempHtml = `<div class="card">-->
+<!--                        <img class="card-img-top" src="${img}" alt="Card image cap">-->
+<!--                         <div class="card-body">-->
+ <!--                                    <a  class="card-title">${title}</a>-->
+<!--                                    <p class="card-text">${ingredient}</p>-->
+ <!--                                    <p class="card-text comment">${recipe}</p>-->
+ <!--                         </div>-->
+
+ <!--                         </div>`;-->
+
+<!--            $("#cards-box").append(tempHtml);-->
+ <!--        }-->
+
+
+
+
+</head>
+<body>
+<h1>쉬운 요리 세상</h1>
+<div id="search">
+    <input type="text" placeholder="검색어 입력" id="title">
+    <button onClick="location.href='ice.html'" onclick="showReview()">검색</button>
+</div>
+
+<!--<div id="cards-box" class="card-columns">-->
+<!--<div class="card">-->
+<!--                    <img class="card-img-top"-->
+<!--                         src=" "-->
+<!--                         alt="Card image cap">-->
+<!--                    <div class="card-body">-->
+<!--                        <a  class="card-title"></a>-->
+<!--                        <p class="card-text"></p>-->
+<!--                        <p class="card-text comment"></p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--</div>-->
+
+<!--  <h2>최근 올라온 레시피 </h2>-->
+
+<!--  <div class="card" style="width: 18rem;">-->
+<!--      <img src="//item.ssgcdn.com/48/16/47/item/1000022471648_i1_1200.jpg" class="card-img-top" alt="알리올리오">-->
+<!--      <div class="card-body">-->
+<!--          <h5 class="card-title">알리올리오 파스타</h5>-->
+<!--          <p class="card-text"><li class="point"> 파스타: 1줌</li>-->
+<!--          <li class="point">1.통마늘: 3~4개  </li>-->
+<!--          <li class="point">2.소금: 리터 당 반큰술</li>-->
+<!--          <li class="point">3.면수: 반 컵</li>-->
+<!--          <li class="point">4.올리브유 : 5큰술</li>-->
+<!--          </p>-->
+<!--          <a href="#" konclic="location.href='A1.html'"  class="btn btn-primary">더 알아보기</a>-->
+<!--      </div>-->
+<!--  </div>-->
+<!--      <div class="card" style="width: 18rem;">-->
+<!--          <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/RxX/image/6ACLlTk1-mic-17dNfuMCEExqQc.jpg" class="card-img-top" alt="버섯 리조또">-->
+<!--          <div class="card-body">-->
+<!--              <h5 class="card-title">버섯 리소토</h5>-->
+<!--              <p class="card-text"><li class="point">말린 포르치니 버섯: 7~10g </li>-->
+<!--              <li class="point">1.생버섯 :100g</li>-->
+<!--              <li class="point">2.화이트 와인: 1/4겁</li>-->
+<!--              <li class="point">3.쌀: 40~80g   </li>-->
+<!--              <li class="point">4.다진 양파: 1/4개분 </li>-->
+<!--             <li class="point">5.다진 마늘: 1알분</li>-->
+<!--              <li class="point">6. 버터,야채스톡,소금 </li>-->
+<!--              <li class="point">7. 후추,파마산 치즈,올리브유</li>-->
+
+<!--          </p>-->
+<!--              <a href="#" onclick="location.href='A2.html'" class="btn btn-primary">더 알아보기</a>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--      <div class="card" style="width: 18rem;">-->
+<!--          <img src="https://cdn.crowdpic.net/list-thumb/thumb_l_B33664D255F6EA6A59EE467C720AA345.jpg" class="card-img-top" alt="봉골레 파스타">-->
+<!--          <div class="card-body">-->
+<!--              <h5 class="card-title">봉골레 파스타</h5>-->
+<!--              <p class="card-text">-->
+<!--              <li class="point">1.스파게티: 한줌 </li>-->
+<!--                  <li class="point">2.바지락: 한줌</li>-->
+<!--                  <li class="point">3.양파: 1/2개</li>-->
+<!--                  <li class="point">4.마늘: 5~6개</li>-->
+<!--                  <li class="point">5.페페로지노: 5개</li>-->
+<!--              <li class="point">6.화이트 와인,레몬 주스소금,후추</li>-->
+<!--              </p>-->
+
+
+<!--              <a href="#" class="btn btn-primary">더 알아보기</a>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--      <div class="card" style="width: 18rem;">-->
+<!--          <img src="https://recipe1.ezmember.co.kr/cache/recipe/2015/08/21/c07a53327acd9d80a3916a74e6a2f9961.jpg" class="card-img-top" alt="스테이크">-->
+<!--          <div class="card-body">-->
+<!--              <h5 class="card-title">스테이크</h5>-->
+<!--              <p class="card-text">-->
+<!--                  <li class="point">1.등심 스테이크용 고기-->
+<!--                  <li class="point">2.올리브유,로즈마리-->
+<!--                  <li class="point">4.포도주스 (두 컵 정도)-->
+<!--              </p>-->
+
+<!--              <a href="#"onclick="location.href='A3.html'" class="btn btn-primary">더 알아보기</a>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--<div class="card" style="width: 18rem;">-->
+<!--  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTHIYzMRvnYGq593rG7ZgiQWbCKkSJQZp2y0A&usqp=CAU" class="card-img-top" alt="연어 스테이크">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">연어 스테이크</h5>-->
+<!--    <p class="card-text"><li class="point">1.연어-->
+<!--                         <li class="point">2.양퍄: 1/2개-->
+<!--                         <li class="point">3.허브 솔트,부추-->
+<!--                         <li class="point">4.후추,올리브유-->
+<!--                               </p>-->
+<!--    <a href="#"onclick="location.href='A4.html'" class="btn btn-primary">더 알아보기</a>-->
+<!--  </div>-->
+<!--</div>-->
+<!--  <div class="card" style="width: 18rem;">-->
+<!--  <img src="..." class="card-img-top" alt="...">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Card title</h5>-->
+<!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--    <a href="#"onclick="location.href='A5.html'" class="btn btn-primary">Go somewhere</a>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+</html>

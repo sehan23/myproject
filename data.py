@@ -37,5 +37,5 @@ while page < 114:
             doc = {'title': title,
                    'img': image,
                    'ingredient': ingredient_data,
-                   'recipe':recipe_data}
+                   'recipe': recipe_data}
             db.foods.insert_one(doc)

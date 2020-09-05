@@ -18,7 +18,10 @@ def read_reviews():
 def home():
     return render_template('project-1.html')
 
-
+@app.route('/search')
+def search():
+    q_receive = request.args.get('q_give')
+    return render_template('ice.html', q=q_receive)
 
 
 

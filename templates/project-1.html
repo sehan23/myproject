@@ -104,11 +104,10 @@
             $("#cards-box").empty();
              $.ajax({
                     type: "GET",
-                    url: "/food?title_give=" + '{{q}}' ,
+                    url: "/food?title_give=" + $('#title').val() ,
                     data: {},
                     success: function (response) {
                         let articles = response["reviews"];
-
                         for (let i = 0; i < articles.length; i++) {
                             let article = articles[i];
                             makeCard(article["title"], article["img"], article["ingredient"], article["recipe"])
